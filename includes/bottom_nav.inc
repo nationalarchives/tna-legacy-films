@@ -1,0 +1,1 @@
+<div class="bottomnav" align="right"> <a href="/films/aboutexhibition.htm">Acknowledgement</a>   |   <a href="/films/copyright.htm">Copyright </a></div>
