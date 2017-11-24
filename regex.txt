@@ -1,0 +1,26 @@
+^\s*var flashvars =(.|\n)*?file:\s*'(.*?)'((.|\n)*?image:\s*'(.*?)')?((.|\n)*?title:\s*'(.*?)')?((.|\n)*?author:\s*'(.*?)')?((.|\n)*?description:\s*'(.*?)')?(.|\n)*?};
+
+
+
+var filename  = $2;
+var fileimg   = $5;
+var filetitle = $8;
+var fileauth  = $11;
+var filedesc  = $14;
+
+
+
+
+
+
+<script>
+	jwplayer("player").setup({
+        "file":filename,
+		"image": fileimg,
+		"title": filetitle,
+		"description": filedesc + ' - ' + fileauth,
+		"width":400,
+		"height":300,
+		"stretching":"uniform"
+      });
+</script>

@@ -38,19 +38,18 @@
 <link href="/films/css/films.css" rel="stylesheet" type="text/css" />
 <script language="JavaScript" type="text/javascript" src="/script/utils.js"></script>
 <script type="text/javascript" src="/script/jquery-latest.js"></script>
-<script language="JavaScript" type="text/javascript" src="/script/ns4resize.js"></script>
-<script language="JavaScript" type="text/javascript" src="/films/scripts/media.js"></script>
-<script language="JavaScript" type='text/javascript' src='/script/swfobject.js'></script>
-     <script type="text/javascript">
+  <script src="/scripts/jwplayer/jwplayer.js"></script>
+  <script>jwplayer.key="31yQat2y0n7kujNWMVFwot/u0KheajImXOtcK4dUMSM=";</script>     <script type="text/javascript">
     <!--//
-      var flashvars =
-      {
-        file:                 	'http://www.nationalarchives.gov.uk/films/large-files/public-info-films/Suez-in-Perspective.flv',
-		
-		stretching:				'exactfit'
-      };
+var filename  = 'http://www.nationalarchives.gov.uk/films/large-files/public-info-films/Suez-in-Perspective.flv';
+var fileimg   = '';
+var filetitle = '';
+var fileauth  = '';
+var filedesc  = '';
 
       var params =
+
+
       {
         allowfullscreen:      'true',
         allowscriptaccess:    'always'
@@ -62,7 +61,6 @@
         name:                 'player'
       };
 
-      swfobject.embedSWF("/video/player/player.swf", "player", "320", "240", "9.0.124", false, flashvars, params, attributes);
     //-->
     </script>
 
@@ -209,5 +207,16 @@
 
 
 </div>
+<script>
+	jwplayer("player").setup({
+        "file":filename,
+		"image": fileimg,
+		"title": filetitle,
+		"description": filedesc + ' - ' + fileauth,
+		"width":400,
+		"height":300,
+		"stretching":"uniform"
+      });
+</script>
 </body>
 </html>
